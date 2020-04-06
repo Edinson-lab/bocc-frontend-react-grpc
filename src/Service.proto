@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package grpc;
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+
+option java_multiple_files = true;
+option java_package = "com.adl.bocc.salaryloan.grpc";
+option java_outer_classname = "SalaryLoanProto";
+
+// The greeting service definition.
+service SalaryLoanService {
+    // Create salary loan
+    rpc create (SalaryLoan) returns (SalaryLoan) {
+    }
+    
+    // Create salary loan
+    rpc findAll (google.protobuf.Empty) returns (SalaryLoanList) {
+    }
+}
+
+message SalaryLoan {
+  int32 clientId = 1;
+  int32 acoNumber = 2;
+  int32 amount = 3;
+  int32 term = 4;
+  int32 loanId = 5;
+  google.protobuf.Timestamp validThru = 6;
+  google.protobuf.Timestamp creationDate = 7;
+}
+
+message SalaryLoanList {
+  repeated SalaryLoan salaryLoan = 1;
+}
