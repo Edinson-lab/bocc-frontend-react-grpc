@@ -9,7 +9,7 @@
     "@testing-library/user-event": "^7.2.1",
     "classnames": "^2.2.6",
     "google-protobuf": "^3.7.1",
-    "grpc": "^1.19.0",
+    "grpc": "^1.24.9",
     "grpc-web": "^1.0.4",
     "primereact": "^4.1.2",
     "react": "^16.13.1",
